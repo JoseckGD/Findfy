@@ -3,7 +3,16 @@
     <string name="test">Test</string>
     <string name="info">Información</string>
     <string name="nombre">Nombre</string>
-    <string name="nombre1">Escribe tu nombre</string>
+    <string name="nombre_hint">Escribe tu nombre</string>
     <string name="nivel">Nivel educativo</string>
+
+    <string-array name="nivel_educativo">
+        <item>Elije tu nivel educativo</item>
+        <item>Kinder</item>
+        <item>Primaria</item>
+        <item>Secundaria</item>
+        <item>Preparatoria</item>
+        <item>Universidad</item>
+    </string-array>
 
 </resources>
