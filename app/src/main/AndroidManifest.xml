@@ -11,13 +11,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Findfy"
         tools:targetApi="31" >
-
         <activity
             android:name=".informacion"
             android:exported="false" />
         <activity
             android:name=".Registro_Screen"
-            android:exported="true" >
+            android:exported="false" />
+        <activity
+            android:name=".Splash_Screen"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Findfy.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
