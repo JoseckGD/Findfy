@@ -15,6 +15,9 @@
             android:name=".informacion"
             android:exported="false" />
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".Registro_Screen"
             android:exported="false" />
         <activity

@@ -30,6 +30,9 @@
 
         <item name="android:statusBarColor">@color/status</item>
 
+        <item name="android:editTextColor">@color/textColor</item>
+        <item name="android:textColorHint">@color/textColorHint</item>
+
     </style>
 
     <style name="Theme.Findfy.Fullscreen" parent="Theme.Findfy">

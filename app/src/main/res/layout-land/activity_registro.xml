@@ -132,6 +132,7 @@
             android:backgroundTint="#1C2F35"
             android:elevation="10dp"
             android:fontFamily="@font/inter_semibold"
+            android:onClick="Entrar"
             android:shadowColor="#000000"
             android:shadowRadius="10"
             android:text="ENTRAR"
