@@ -1,23 +1,13 @@
 package com.example.findfy;
 
-import android.annotation.SuppressLint;
-
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
+import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Looper;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowInsets;
 import android.view.WindowManager;
-
-import com.example.findfy.databinding.ActivitySplashScreenBinding;
 
 public class Splash_Screen extends AppCompatActivity {
 
@@ -25,6 +15,9 @@ public class Splash_Screen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("MiSharedPreferences", Context.MODE_PRIVATE);
+        String nombre = sharedPreferences.getString("Nombre", "");
 
         // Ocultar la barra de acción en la pantalla de inicio
         if (getSupportActionBar() != null) {
@@ -39,9 +32,15 @@ public class Splash_Screen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Splash_Screen.this, Registro_Screen.class);
-                startActivity(intent);
-                finish();
+                if (nombre.length() > 0) {
+                    Intent intent = new Intent(Splash_Screen.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else {
+                    Intent intent = new Intent(Splash_Screen.this, Registro_Screen.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         }, 3000);
     }

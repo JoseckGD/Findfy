@@ -8,7 +8,6 @@
 
     <string-array name="nivel_educativo">
         <item>Elije tu nivel educativo</item>
-        <item>Kinder</item>
         <item>Primaria</item>
         <item>Secundaria</item>
         <item>Preparatoria</item>
